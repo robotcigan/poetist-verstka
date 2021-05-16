@@ -20,18 +20,25 @@
 .col
   grid-column span 12
 
+// .col--sm,
+// .col--md,
+// .col--lg,
+// .col--xl
+//   &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
+//     grid-column span 12
+
+// .col--xs
+//   for $xs in 1..12
+//     &-{$xs}
+//       grid-column span $xs
+
+.col--xs,
 .col--sm,
 .col--md,
 .col--lg,
 .col--xl
   &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
     grid-column span 12
-
-.col--xs
-  for $xs in 1..12
-    &-{$xs}
-      grid-column span $xs
-
 
 @media(min-width 544px)
   .container
@@ -42,53 +49,53 @@
       &-{$sm}
         grid-column span $sm
 
-@media(min-width 768px)
-  .container
-    grid-column-gap 2rem
-    grid-row-gap 2rem
-  .col--md
-    for $md in 1..12
-      &-{$md}
-        grid-column span $md
+// @media(min-width 768px)
+//   .container
+//     grid-column-gap 2rem
+//     grid-row-gap 2rem
+//   .col--md
+//     for $md in 1..12
+//       &-{$md}
+//         grid-column span $md
 
-@media(min-width 992px)
-  .wrapper
-    padding-left 3%
-    padding-right 3%
-  .container
-    grid-column-gap 1.2rem
-    grid-row-gap 1.2rem
-  .col--lg
-    for $lg in 1..12
-      &-{$lg}
-        grid-column span $lg
-
-
-
-@media(min-width 1200px)
-  .container
-    grid-column-gap 2rem
-    grid-row-gap 2rem
-  .col--xl
-    for $xl in 1..12
-      &-{$xl}
-        grid-column span $xl
+// @media(min-width 992px)
+//   .wrapper
+//     padding-left 3%
+//     padding-right 3%
+//   .container
+//     grid-column-gap 1.2rem
+//     grid-row-gap 1.2rem
+//   .col--lg
+//     for $lg in 1..12
+//       &-{$lg}
+//         grid-column span $lg
 
 
-@media(min-width 1500px)
-  .container
-    grid-column-gap 3.2rem
-    grid-row-gap 3.2rem
-  .col--xxl
-    for $xxl in 1..12
-      &-{$xxl}
-        grid-column span $xxl
+
+// @media(min-width 1200px)
+//   .container
+//     grid-column-gap 2rem
+//     grid-row-gap 2rem
+//   .col--xl
+//     for $xl in 1..12
+//       &-{$xl}
+//         grid-column span $xl
 
 
-@media(min-width 1600px)
-  .wrapper
-    padding 0
-    width 1504px
+// @media(min-width 1500px)
+//   .container
+//     grid-column-gap 3.2rem
+//     grid-row-gap 3.2rem
+//   .col--xxl
+//     for $xxl in 1..12
+//       &-{$xxl}
+//         grid-column span $xxl
+
+
+// @media(min-width 1600px)
+//   .wrapper
+//     padding 0
+//     width 1504px
 
 
 @media(max-width 1500px)

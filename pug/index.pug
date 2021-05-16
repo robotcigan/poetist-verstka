@@ -1,115 +1,38 @@
 extends layout.pug
 
 block content
-  
 
   .wrapper
-    .index-texts
-      .index-texts__container
-        h1.index-texts__title Клиника Глазуновой
-        p.index-texts__subtitle Центр профессиональной психотерапии, психоневрологический центр. У нас работают только дипломированные врачи, работающие по европейским клинически подтверждённым методикам
-  section.hero.section
-    .hero__our-specialists Наши специалисты
-    .hero__wrapper
-      .hero__parallax
-        .hero__container
-          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
-          - for (var i = 1; i < 7; i++)
-              a(href="").specialist
-                .specialist__photo
-                  +webp('specialists/' + i, 'jpg')
-                  .specialist__photo-hover
-                    +webp('specialists/' + i + '-hover', 'jpg')
-                .specialist__container
-                  .specialist__name= specialists[i - 1]
-                  .specialist__status-container
-                    .specialist__status Психиатр-психотерапевт
-                    .specialist__status Кандидат медицинских наук
-                    .specialist__status Член Российского общества психиатров
-
-
-  section.about-section.section
-    .wrapper
-      .container
-        .col.col--md-6
-          .label О клинике
-          .about-section__title Более 30 квалифицированных специалистов разберут индивидуально ваш случай и подберут лечение. Мы работаем почти со всеми видами психологических проблем. 
-          p.about-section__text Центр профессиональной психотерапии, психоневрологический центр. У нас работают только дипломированные врачи, работающие по европейским клинически подтверждённым методикам.
-          .btn
-            .btn__text Подробнее о клинике
-        .col.col--md-1
-        .col.col--md-5
-          .about-section__img
-            +webp('clinic', 'jpg')
-  
-
-  section.blockquote-section.section
-    .wrapper
-      .blockquote-container
-        .blockquote
-          .blockquote__title «Из любой ситуации есть выход! Мы лишь поможем вам найти его. Доверьтесь профессионалам с большим стажем»
-          .specialist
-            .specialist__photo
-              +webp('blockquote-index', 'jpg')
-            .specialist__container
-              .specialist__name Глазунова Татьяна Ивановна
-              .specialist__status-container
-                .specialist__status Психиатр-психотерапевт
-                .specialist__status Кандидат медицинских наук
-                .specialist__status Член Российского общества
-
-  section.section.prems
-    .wrapper
-      .container
-        .col.col--lg-6
-          .prem.prem_static
-            .prem__img
-              +webp('prem', 'jpg')
-            .prem__top
-              .prem__title Профессиональная терапия
-            .prem__bottom
-              p.prem__text Если вы хотите чтобы ваше посещение сеансов осталось неизвестным для других, то это не проблема.
-        .col.col--lg-6
-          .prem.prem_animate
-            .prem__top
-              .prem__title.prem__title_active Конфиденциальность
-              .prem__title Дипломированные специалисты
-              .prem__title Европейские методики
-            .prem__bottom
-              p.prem__text Если вы хотите чтобы ваше посещение сеансов осталось неизвестным для других, то это не проблема.
-              .prem__progress
-                .prem__progress-bar
-
-  section.section.news
-    .wrapper
-      .index-header
-        h2 Блог
-        .index-header__link: a(href="") Смотреть все
-      .new
-        a(href="").new__img
-          +webp('new-1', 'jpg')
-        .new__container
-          .date.new__date 31.03.2020
-          a(href="").new__title Изменение времени работы
-          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-          a(href="").new__link Психотерапия
-      .new
-        a(href="").new__img
-          +webp('new-2', 'jpg')
-        .new__container
-          .date.new__date 31.03.2020
-          a(href="").new__title Изменение времени работы
-          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-          a(href="").new__link Психотерапия
-      .new
-        a(href="").new__img.new__img_noimage
-          //- +webp('noimage', 'png')
-          img(src="./img/noimage.png", alt="")
-        .new__container
-          .date.new__date 31.03.2020
-          a(href="").new__title Изменение времени работы
-          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-          a(href="").new__link Психотерапия
-
-
-  include form-block.pug
+    .author
+      .author__img 
+        img(src="../img/poets/Пушкин.png", alt="")
+      .author__name
+        span.author__first-name Пушкин
+        | Александр Сергеевич
+    .poems
+      .poem
+        a(href="") Евгений Онегин
+      .poem
+        a(href="") У лукоморья
+      .poem
+        a(href="") Зимнее утро
+      .poem
+        a(href="") Зимний вечер
+      .poem
+        a(href="") Зима!... Крестьянин торже
+      .poem
+        a(href="") Няне
+      .poem
+        a(href="") Унылая пора
+      .poem
+        a(href="") Осень
+      .poem
+        a(href="") Пророк
+      .poem
+        a(href="") Туча
+      .poem
+        a(href="") Узник
+      .poem
+        a(href="") Уж небо осенью дышало
+      .poem
+        a(href="") Я помню чудное мгновень
