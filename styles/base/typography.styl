@@ -1,0 +1,227 @@
+p
+  color $main
+  display block
+  font-size 1.6rem
+  font-weight 400
+  line-height (26 / 16)
+  margin-bottom 2em
+  margin-top 0
+  & + p
+    margin-top -1.5em
+  & + .btn
+    margin-top -1em
+  a
+    color $primary !important
+    linkHover($primary)
+    &:before
+      bottom -.05em
+  .link
+    display inline
+
+h1, .h1
+  color $second
+  font-family $font
+  font-size 7.2rem
+  font-weight 500
+  // line-height (82 / 72)
+  line-height 1.2
+  // letter-spacing -3px
+  letter-spacing -.05em
+  margin-bottom .5em
+  margin-top 0
+  &_long
+    font-size 4rem
+
+h2, .h2
+  font-family $font
+  font-size 4.8rem
+  font-weight 500
+  line-height 1
+  letter-spacing -2px
+  margin-top 0
+  margin-bottom .5em
+
+h3, .h3
+  font-family $font
+  font-size 3.2rem
+  font-weight 500
+  // line-height (32 / 24)
+  line-height 1.2
+  margin-bottom .75em
+  margin-top 0
+
+
+h4, .h4
+  font-family $font
+  font-size 2.4rem
+  font-weight 500
+  line-height (32 / 24)
+  margin-bottom .75em
+  margin-top 0
+
+h5, .h5
+  font-family $font
+  font-size 1.4rem
+  font-weight 700
+  letter-spacing 1px
+  margin 0
+  text-transform uppercase
+
+// ol
+//   counter-reset item
+//   margin-left 0
+//   // padding-left 3.2rem
+//   padding-left 1.2em
+
+small
+  color $gray
+  display block
+  font-size 1.2rem
+  line-height 1.6
+  margin-bottom 2em
+  a
+    color $main
+    linkHover($primary)
+
+strong
+  display block
+  font-size 1.8rem
+  letter-spacing -.5px
+  line-height 1.5
+  font-weight 500
+  margin-bottom .7em
+
+.header-center
+  text-align center
+
+ol
+  margin 0
+  margin-bottom 2.5em
+  padding 0
+  padding-left 1.2em
+  li
+    // display block
+    font-size 1.8rem
+    font-weight 300
+    line-height 1.6
+    margin-bottom .5em
+    // margin-left 1em
+    margin-left 0
+    position relative
+    vertical-align top
+    // &:before
+    //   display inline-block
+    //   content counter(item) ". "
+    //   counter-increment item
+    //   font-family $font-secondary
+    //   font-size 1em
+    //   left -6.4rem
+    //   line-height 1
+    //   position absolute
+    //   top -2rem
+
+ul
+  margin 0
+  margin-bottom 2em
+  list-style-type none
+  // padding-left 1em
+  padding-left 0
+  li
+    // display inline-block
+    display block
+    font-size 1.8rem
+    line-height 1.6
+    margin-bottom .75em
+    // margin-bottom 0
+    margin-left 0
+    position relative
+    vertical-align top
+    &:before
+      background-color $gray
+      border-radius 50%
+      content ''
+      display block
+      left -.8em
+      // position absolute
+      position relative
+      size(4px)
+      top .9em
+      // top 0
+      transition width 1s cubic-bezier(.4,0,0,1) .4s
+      vertical-align middle
+
+blockquote
+  font-size 2.4rem
+  font-weight 500
+  line-height (32 / 24)
+  margin 0
+  margin-bottom 4rem
+  position relative
+  &:before
+    // align-items center
+    // background-color $primary-light
+    content url('../../img/services-quote.svg')
+    // border-radius 50%
+    // display flex
+    // justify-content center
+    left -5.6rem
+    position absolute
+    // size(4rem)
+    top -.6rem
+
+
+// @media(max-width 1200px)
+//   h1, .h1
+//     font-size 3.2rem
+
+@media(max-width 1200px)
+  h1, .h1
+    font-size 4.8rem
+    &_long
+      font-size 4rem
+  h2, .h2
+    font-size 4rem
+  h3, .h3
+    font-size 4rem
+  p
+    font-size 1.4rem
+  ul
+    padding-left 1.6rem
+    li
+      &:before
+        left -1.6rem
+
+@media(max-width 767px)
+  h1, .h1
+    font-size 3.2rem
+    margin-bottom .25em
+    &_long
+      font-size 2.4rem
+  h2, .h2
+    font-size 2.4rem
+  h3, .h3
+    font-size 2.4rem
+  h4, .h4
+    font-size 1.8rem
+  ul
+    // padding-left 0
+    li
+      font-size 1.4rem
+  .ul-animation.animated li:before
+    width 1.6rem
+  // blockquote
+  //   font-size 2rem
+  //   margin-bottom 2rem
+  //   margin-left -1.2rem
+  //   margin-right -1.2rem
+  //   padding 1.6rem 3.6rem 1.6rem 1.2rem
+  //   &:before
+  //     background-position top right
+  //     height 2rem
+  //     left initial
+  //     right .8rem
+
+
+@media(max-width 350px)
+  h1, .h1
+    word-break break-word

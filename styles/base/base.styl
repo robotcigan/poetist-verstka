@@ -1,0 +1,86 @@
+// @import '../helpers/variables.styl'
+
+*
+  box-sizing border-box
+  text-decoration none
+  backface-visibility hidden
+  &:focus
+    outline 0
+
+*:hover
+  text-decoration none
+
+*:focus
+  outline 0
+
+a
+  color inherit
+  text-decoration none
+
+:root
+  --header-margin-bottom 5rem
+
+.link
+  margin-bottom .5em
+  transition $transition
+  a
+    color $primary
+    cursor pointer
+    font-size 1.6rem
+    margin-right .4rem
+    position relative
+    text-decoration none
+    transition $transition
+    &:after
+      background-color rgba($primary, .3)
+      bottom 0
+      content ''
+      height 1px
+      right 0
+      position absolute
+      transition width .4s $bezier
+      width 0
+    &:hover
+      &:after
+        left 0
+        width 100%
+  .svg
+    transform translateY(1px)
+  &:hover
+    color $primary
+  &_active
+    color $primary
+
+
+html
+  font-size 62.5%
+  margin 0
+  max-width 100%
+  padding 0
+  width 100%
+
+body
+  color $main
+  font-family $font
+  font-weight 400
+  font-size 1.6em
+  line-height 1
+  margin 0
+  max-width 100%
+  padding 0
+  text-size-adjust 100%
+  text-rendering optimizeLegibility
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing antialiased
+  width 100%
+  *
+    box-sizing border-box
+
+img
+  display block
+
+.svg
+  opacity 0
+
+.replaced-svg
+  opacity 1

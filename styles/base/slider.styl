@@ -1,0 +1,153 @@
+.slick
+  &-prev,
+  &-next
+    top 50%
+    &:before
+      font-size 2.4rem
+      color $main
+      transition opacity .3s ease
+    &:hover
+      &:before
+        opacity .3
+  &-prev
+    left 2.2rem
+    &:before
+      content url('../../img/slider-arrow-left.png')
+  &-next
+    right 2.2rem
+    &:before
+      content url('../../img/slider-arrow-right.png')
+  &-dots
+    bottom 4rem
+    left 0
+    li
+      margin 0
+  &-dots li button:before
+    color #fff
+    // display none
+    font-size 3.2rem
+    opacity 1
+  &-dots li.slick-active button:before
+    color $primary
+    opacity 1
+  &-dots
+    li:before
+      display none
+
+.slider
+  opacity 0
+  transition opacity .5s ease
+
+.slick-initialized
+  opacity 1
+
+.index-slider
+  margin-bottom 3.2rem
+  .slide
+    position relative
+    &__container
+      left 6.4rem
+      position absolute
+      top 6.4rem
+      width 48rem
+    &__title
+      display block
+      font-size 4.8rem
+      margin-bottom .5em
+    &__subtitle
+      margin-bottom 1.5em
+      opacity .5
+    img
+      display block
+      width 100%
+
+.slider
+  img
+    width 100%
+  &--1
+    .slick
+      &-slide
+        margin 0 !important
+
+.slick-initialized
+  opacity 1
+
+.slider-container
+  margin 0 -1rem
+
+.slider
+  .slick-slide
+    margin 0 1rem
+
+
+
+@media(max-width 1200px)
+  .slick-dotted.slick-slider
+    margin-bottom 6.4rem
+  .index-slider
+    .slide
+      &__container
+        left 5%
+        top 10%
+      &__title
+        font-size 3.2rem
+      .btn
+        display none
+
+
+@media(max-width 767px)
+  .index-slider
+    margin-top -2rem
+    margin-left -1.2rem
+    margin-right -1.2rem
+    .slide
+      &__img
+        img
+          height 14rem
+          object-fit cover
+          object-position center
+      &__container
+        background-color $light-gray
+        padding 2.4rem
+        padding-bottom .4rem
+        position initial
+        width initial
+      &__title
+        font-size 2.4rem
+  .reverse-for-mobile
+    .slider-container
+      max-width 100vw
+  .slider
+    opacity 1
+  .slider-container
+    overflow hidden
+    margin 0
+    margin-left -1.2rem
+    margin-right -1.2rem
+    -webkit-overflow-scrolling touch
+  .slider
+    display flex
+    padding-left 1.2rem
+    overflow-x scroll
+    overflow-y hidden
+    &--1
+      overflow-x initial
+      overflow-y initial
+    .card
+      margin-right 1rem
+      max-width 24rem
+      &__imgs
+        height 16rem
+      &__plate
+        right .8rem
+        top .8rem
+    .review
+      margin-right 1rem
+      max-width 24rem
+    .category
+      margin-right 1rem
+    &--1
+      padding-left 0
+  .slick
+    &-dots
+      bottom 2rem

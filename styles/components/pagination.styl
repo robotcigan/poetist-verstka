@@ -1,0 +1,55 @@
+.pagination
+  display flex
+  font-family $font-second
+  font-size 1.6rem
+  justify-content space-between
+  margin-bottom 2.4rem
+  padding 1.2rem 0
+  &__numbers
+    display flex
+  &__number
+    align-items center
+    display inline-flex
+    height 4.8rem
+    position relative
+    &:not(:last-child)
+      margin-right 1.5em
+    &_active
+      align-items center
+      background-color $primary
+      border-radius 50%
+      color #fff
+      display flex
+      justify-content center
+      size(4.8rem)
+    &:not(.pagination__number_active):hover
+      color $primary
+      &:after
+        opacity 1
+        width 200%
+        left -50%
+  &__prev,
+  &__next
+    align-items center
+    display inline-flex
+    height 4.8rem
+    transition $transition
+    &:hover
+      color $primary
+
+
+
+@media(max-width 767px)
+  .pagination
+    font-size 2rem
+    justify-content center
+    margin-bottom 0
+    &__number
+      font-size 1.6rem
+      &:not(:last-child)
+        margin-right 1.5em
+    &__prev,
+    &__next
+      display none
+      // span
+      //   display none

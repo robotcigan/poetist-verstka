@@ -1,0 +1,116 @@
+.blind
+  display none
+  border-bottom $border
+  &__container
+    align-items center
+    display flex
+    justify-content space-between
+    padding .5em 0
+  &__noimages
+    align-items center
+    display flex
+    cursor pointer
+    margin-right 2em
+    border-radius $radius
+    padding 6px 8px
+    &_active
+      border 2px solid
+    &-btn-icon
+      margin-right .5rem
+  &__fonts
+    // align-items baseline
+    border-left $border
+    border-right $border
+    display flex
+    padding-left 3.2rem
+    padding-right 3.2rem
+  &__font-btn
+    align-items center
+    border-radius $radius
+    border 2px solid #ddd
+    cursor pointer
+    display flex
+    font-size 1.4rem
+    justify-content center
+    cursor pointer
+    size(3.6rem)
+    &_bigger
+      font-size 1.8rem
+    &_biggest
+      font-size 2.4rem
+    &:not(:last-child)
+      margin-right 1.2rem
+    &_active
+      border-color #000
+  &__colors
+    display flex
+    &-btn
+      align-items center
+      border-radius $radius
+      cursor pointer
+      display flex
+      padding 4px 8px
+      &:not(:last-child)
+        margin-right 1em
+      &_active
+        border 2px solid
+      &-icon
+        border 2px solid #fff
+        border-radius 50%
+        margin-right 8px
+  &_active
+    display block
+  
+
+
+.page
+  &_blindmode
+    filter grayscale(100%) contrast(1)
+    // img
+    // *
+    //   color #000 !important
+    p, h1, h2, h3, h4, span, ul, ol
+      opacity 1
+  &_noimages
+    img[src$=".jpg"],
+    img[src$=".png"]
+      display none
+    .logo
+      img
+        display block
+  &_black-white
+    background-color #fff
+    filter none
+    *
+      color #000 !important
+    .header, .form, .form-message__text, .blockquote-section
+      background-color #fff
+    img
+      filter grayscale(100%) contrast(1)
+  &_white-black
+    background-color #000
+    filter none
+    *
+      color #fff !important
+    .header, .form, .form-message__text, .blockquote-section
+      background-color #000
+    img
+      filter grayscale(100%) contrast(1)
+  &_blue
+    background-color #9dd1ff
+    filter none
+    *
+      color #063462 !important
+    .header, .form, .form-message__text, .blockquote-section
+      background-color #9dd1ff
+    img
+      filter grayscale(100%) contrast(1)
+  &_brown
+    background-color #f7f3d6
+    filter none
+    *
+      color #54371f !important
+    .header, .form, .form-message__text, .blockquote-section
+      background-color #f7f3d6
+    img
+      filter grayscale(100%) contrast(1)

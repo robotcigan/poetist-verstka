@@ -1,0 +1,30 @@
+.socials
+  display flex
+  // justify-content center
+
+.social
+  circleHover(5.6rem, #eee, #ddd)
+  position relative
+  &:not(:last-child)
+    margin-right .8rem
+  img
+    opacity .6
+    position relative
+    transform scale(.8)
+    z-index 10
+
+
+.socials
+  &_white
+    img
+      filter invert(100%)
+    .social
+      &:hover
+        img
+          filter invert(0%)
+      &:before
+        border-color #fff
+      &:after
+        background-color #fff
+
+

@@ -1,0 +1,300 @@
+.btn
+  border none
+  background-color $primary
+  border-radius 40px
+  align-items center
+  color #fff
+  cursor pointer
+  display inline-flex
+  font-family $font
+  font-size 1.6rem
+  // font-weight 500
+  justify-content center
+  line-height 1
+  // letter-spacing -.2px
+  max-height 6.4rem
+  overflow hidden
+  padding 2.4rem 4rem
+  position relative
+  vertical-align bottom
+  &:before
+    background-color $primary - 7%
+    content ''
+    left 0
+    height 100%
+    position absolute
+    top 0
+    transition $transition
+    width 0
+    z-index 0
+  &__text
+    position relative
+    transition $transition
+    z-index 10
+    &:nth-child(2)
+      opacity 0
+      position absolute
+      transform translateY(100%)
+  &_ghost
+    background-color transparent
+    &:before
+      display none
+    .btn
+      &__text
+        color $primary
+  &:hover
+    &:before
+      width 100%
+    .btn
+      &__text
+        &:nth-child(1)
+          opacity 0
+          transform translateY(-100%)
+        &:nth-child(2)
+          opacity 1
+          transform none
+  &--small
+    padding 1.6rem 2.4rem
+  &--transparent
+    background-color rgba(#fff, .2)
+  &--full
+    width 100%
+  & + &
+    margin-left 2rem
+  & + .slider
+    margin-top 3.2rem
+
+.swal2-styled.swal2-confirm
+  background-color $primary !important
+  border-radius 32px !important
+  box-shadow 0 !important
+
+
+.form-control
+  margin-bottom 2rem
+  position relative
+  width 100%
+  label,
+  &__label
+    color $main
+    cursor text
+    display inline-block
+    line-height 1
+    font-weight 400
+    margin-bottom .75em
+    transition all .2s
+    max-width 100%
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea,
+  .custom-select
+    background #fff
+    border none
+    border $border
+    border-radius $radius
+    color $main
+    display block
+    font-family $font
+    font-size 1.6rem
+    line-height 1
+    min-height 6.4rem
+    transition border-color .2s
+    padding 2rem 2.4rem
+    position relative
+    transition $transition
+    resize vertical
+    width 100%
+    -webkit-appearance none
+    .current
+      display inline-block
+      overflow hidden
+      max-width 90%
+      vertical-align middle
+      text-overflow ellipsis
+    &:hover
+      border-color #DBE1E9 - 10%
+    &::placeholder
+      line-height 1.6
+      // vertical-align middle
+  textarea
+    height 100%
+    min-height 18rem
+  .nice-select
+    float initial
+    height initial
+    .list
+      width 100%
+    &.open .list
+      transform none
+    .option
+      font-size 1.2rem
+      line-height 1.6
+      margin 0
+      margin-left 0 !important
+      min-height initial
+      // padding-left 0
+      padding .5em 1em
+    .list
+      display flex
+      flex-direction column
+      z-index 20
+      li
+        display inline-block
+        &:before
+          display none
+    &:after
+      right 2.4rem
+  &_error
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    select,
+    textarea,
+    .select2-selection--single
+      border-color $error
+    label
+      color $error
+    .form-input__icon
+      color $error
+  &_small
+    width 28rem
+  &_horizontal
+    align-items center
+    display flex
+    label
+      flex-shrink 0
+      margin-bottom 0
+      width 16rem
+    // input
+    //   width 50%
+
+
+
+.checkbox
+  align-items center
+  cursor pointer
+  display flex
+  margin-bottom 1em
+  user-select none
+  &__label
+    background transparent
+    border-radius $radius
+    border $border
+    cursor pointer
+    size(1.8rem)
+    display inline-block
+    flex-shrink 0
+    margin-right .4rem
+    position relative
+    transform translateY(-1px)
+    z-index 1
+    &:after
+      color $main
+      // content "\f00c"
+      content url('../../img/check.svg')
+      display none
+      // font-family 'FontAwesome'
+      font-size 1.3rem
+      left 2px
+      position absolute
+      top 2px
+      z-index 10
+  &__text
+    display inline-block
+  .link
+    display inline-block
+    margin-bottom 0
+  input
+    display none
+  input:checked + .checkbox__label
+    // border-color $primary
+    &:after
+      display block
+
+.radio
+  align-items center
+  cursor pointer
+  display flex
+  margin-bottom 1rem
+  user-select none
+  &__label
+    background #fff
+    border-radius 50%
+    border $border
+    cursor pointer
+    size(3.2rem)
+    display inline-block
+    margin-right 1rem
+    position relative
+    z-index 1
+    &:after
+      align-items center
+      content url('../../img/check.svg')
+      display none
+      justify-content center
+      margin-top -2px
+      size(100%)
+      position absolute
+      z-index 10
+  input
+    display none
+  input:checked + .radio__label
+    border-color $primary
+    &:after
+      display flex
+
+.file-upload
+  display block
+  margin-bottom .8rem
+  margin-top .8rem
+  input
+    display none
+  &__label
+    cursor pointer
+    font-size 1.4rem
+    font-weight 700
+    letter-spacing .5px
+    padding .5em 0
+    text-transform uppercase
+    transition $transition
+    &:hover
+      color $primary
+
+
+
+@media(max-width 1200px)
+  .btn
+    padding 1.4em 1.6em
+    &__text
+      font-size 1.4rem
+  .form-control
+    margin-bottom 1.2rem
+    &__label
+      font-size 1.4rem
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    select,
+    textarea,
+    .custom-select
+      font-size 1.4rem
+      min-height 4.8rem
+      padding 1.4rem 1.6rem
+
+
+
+

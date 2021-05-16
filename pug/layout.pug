@@ -1,0 +1,288 @@
+mixin webp(name, format)
+  picture
+    source(srcset="./img/webp/" + name + ".webp" type="image/webp" alt="")
+    img(src="./img/" + name + "." + format + "" , alt="")
+
+block condition
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Клиника Глазуновой
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="./styles/css/vendor.css")
+    link(rel="stylesheet", href="./styles/css/main.css")
+  body
+
+    //- .cursor
+    //-   .cursor__zoom
+    //-     img(src="./img/zoom.svg", alt="")
+    //-   .cursor__before
+    //-   .cursor__arrow.cursor__arrow_left
+    //-     img(src="./img/slider-arrow-left.svg", alt="")
+    //-   .cursor__arrow.cursor__arrow_right
+    //-     img(src="./img/slider-arrow-right.svg", alt="")
+
+
+    //- .mobile-menu-bg
+
+    .mobile-menu
+      .mobile-menu__close
+        img(src="./img/mobile-menu-close.svg", alt="")
+
+      .mobile-menu__container
+        .mobile-menu__nav
+          .mobile-menu__link.mobile-menu__link_big: a(href="./about.html") О клинике
+          .mobile-menu__link.mobile-menu__link_big: a(href="./specialists.html") Специалисты
+          .mobile-menu__link.mobile-menu__link_big: a(href="./services.html") Услуги
+          .mobile-menu__link.mobile-menu__link_big: a(href="./price.html") Цены
+          .mobile-menu__link.mobile-menu__link_big: a(href="./contacts.html") Контакты
+
+          .mobile-menu__link: a(href="./news.html") Блог
+          .mobile-menu__link: a(href="./documents.html") Лицензии и документы
+          .mobile-menu__link: a(href="./reviews.html") Отзывы
+          .mobile-menu__link: a(href="./vacancies.html") Вакансии
+          .mobile-menu__link: a(href="./privacy.html") Политика конфиденциальности
+          .mobile-menu__link: a(href="./sitemap.html") Карта сайта
+
+        .mobile-menu__buttons
+          .mobile-menu__btn Оплатить онлайн
+          .mobile-menu__btn Записаться
+
+        .form-control
+          input(type="text" placeholder="Что ищем?")
+
+        a(href="").blind-btn
+          img(src="./img/eye.svg", alt="")
+          .blind-btn-link Для слабовидящих
+
+      .mobile-menu__container.mobile-menu__container_orange
+
+        .socials
+          a(href="").social.social_insta
+            img(src="./img/insta.svg", alt="")
+          a(href="").social.social_vk
+            img(src="./img/vk.svg", alt="")
+          a(href="").social.social_facebook
+            img(src="./img/facebook.svg", alt="")
+
+        .mobile-menu__phone
+          a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
+        .mobile-menu__mail
+          a(href="mailto:clinicglazunova@gmail.com") clinicglazunova@gmail.com
+
+
+
+    main.page
+      header.header
+        //- .header__notice.header__notice_active
+          .wrapper
+            .header__notice-container
+              .header__notice-text Мы работаем по временному расписанию 
+                a(href="") Подробнее
+              .header__notice-close
+                img(src="./img/mobile-menu-close.svg", alt="")
+
+        .header__progress
+
+
+        .blind
+          .wrapper
+            .blind__container
+              .blind__noimages
+                .blind__noimages-btn-icon
+                  img(src="./img/blind-noimages.svg", alt="")
+                .blind__noimages-btn-text Отключить изображения
+              .blind__fonts
+                .blind__font-btn.blind__font-btn_normal A
+                .blind__font-btn.blind__font-btn_bigger A
+                .blind__font-btn.blind__font-btn_biggest A
+              .blind__colors
+                .blind__colors-btn.blind__colors-btn_black-white
+                  .blind__colors-btn-icon
+                    img(src="./img/blind-black-white.svg", alt="")
+                  .blind__colors-btn-text Чёрный на белом
+                .blind__colors-btn.blind__colors-btn_white-black
+                  .blind__colors-btn-icon
+                    img(src="./img/blind-white-black.svg", alt="")
+                  .blind__colors-btn-text Белый на чёрном
+                .blind__colors-btn.blind__colors-btn_blue
+                  .blind__colors-btn-icon
+                    img(src="./img/blind-blue.svg", alt="")
+                  .blind__colors-btn-text Синий на голубом
+                .blind__colors-btn.blind__colors-btn_brown
+                  .blind__colors-btn-icon
+                    img(src="./img/blind-brown.svg", alt="")
+                  .blind__colors-btn-text Коричневый на бежевом
+
+        .header__container.wrapper
+          .header__left
+            a(href="./pages.html").logo
+              img(src="./img/logo.svg", alt="")
+            .nav
+              .nav__link
+                a(href="./about.html") О клинике
+                .dropdown
+                  .wrapper.dropdown__container
+                    .dropdown__left
+                      .dropdown__title О клинике
+                    .dropdown__right
+                      .dropdown__links
+                        .dropdown__link: a(href="") Блог
+                        .dropdown__link: a(href="") Часто спрашивают
+                        .dropdown__link: a(href="") Лицензии и документы
+                        .dropdown__link: a(href="") Карта сайта
+                        .dropdown__link: a(href="") Политика конфиденциальности
+                        .dropdown__link: a(href="") Онлайн-оплата
+
+              .nav__link
+                a(href="./specialists.html") Специалисты
+                .dropdown
+                  .wrapper.dropdown__container
+                    .dropdown__left
+                      .dropdown__nav
+                        .dropdown__nav-link.dropdown__nav-link_active: a(href="") Психиатры и психотерапевты
+                        .dropdown__nav-link: a(href="") Неврологи и терапевты
+                        .dropdown__nav-link: a(href="") Психологи
+                        .dropdown__nav-link: a(href="") Другие специалисты
+                        .dropdown__nav-link: a(href="") Все специалисты
+                    .dropdown__right
+                      .dropdown__specialists.dropdown__specialists_active
+                        .container
+                          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+                          - for (var i = 1; i < 12; i++)
+                            .col.col--sm-3
+                              a(href="").specialist
+                                .specialist__photo
+                                  +webp('specialists/' + i, 'jpg')
+                                  .specialist__photo-hover
+                                    +webp('specialists/' + i + '-hover', 'jpg')
+                                .specialist__container
+                                  .specialist__name= specialists[i - 1]
+                                  .specialist__status-container
+                                    .specialist__status Психиатр-психотерапевт
+                                    .specialist__status Кандидат медицинских наук
+                                    .specialist__status Член Российского общества
+
+                      .dropdown__specialists
+                        .container
+                          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+                          - for (var i = 1; i < 5; i++)
+                            .col.col--sm-3
+                              a(href="").specialist
+                                .specialist__photo
+                                  +webp('specialists/' + i, 'jpg')
+                                  .specialist__photo-hover
+                                    +webp('specialists/' + i + '-hover', 'jpg')
+                                .specialist__container
+                                  .specialist__name= specialists[i - 1]
+                                  .specialist__status-container
+                                    .specialist__status Психиатр-психотерапевт
+                                    .specialist__status Кандидат медицинских наук
+                                    .specialist__status Член Российского общества психиатров
+
+
+              .nav__link: a(href="./services.html") Услуги
+              .nav__link: a(href="./price.html") Цены
+              .nav__link: a(href="./contacts.html") Контакты
+          .header__right
+            .header__search
+              img(src="./img/search.svg", alt="")
+            .blind-btn
+              img(src="./img/eye.svg", alt="")
+              .blind-btn__link Для слабовидящих
+            a(href="tel:79882459001").header__phone +7 988 245-90-01
+            a(href="./online-payment.html").header__btn.header__btn_payment Оплатить 
+              span  онлайн
+            a(href="./sign.html").header__btn.header__btn_sign Записаться
+            .burger
+
+      .search
+        .wrapper
+          .container
+            .col.col--xl-2.dn-xl
+            .col.col--xl-8
+              form.search__form
+                input(type="text" placeholder="Что вы ищете?").search__input
+                button.search__button
+                  img(src="./img/search.svg", alt="")
+                .search__close.search__close_active
+              .search__examples
+                .search__example-word Например:
+                a(href="").search__example Психотерапия
+                a(href="").search__example Стоимость приёма
+                a(href="").search__example Специалисты
+
+      block content
+      
+
+
+      footer.footer
+        .wrapper
+          .container
+            .col.col--xxl-3.col--lg-3
+              a(href="").logo
+                img(src="./img/logo.svg", alt="")
+            .col.col--xxl-2.col--lg-3.col--xs-6
+              .footer__link: a(href="") О клинике
+              .footer__link: a(href="") Специалисты
+              .footer__link: a(href="") Услуги
+              .footer__link: a(href="") Цены
+              .footer__link: a(href="") Контакты
+            .col.col--xxl-2.col--lg-3.col--xs-6
+              .footer__link: a(href="") Блог
+              .footer__link: a(href="") Часто спрашивают
+              .footer__link: a(href="") Онлайн-оплата
+              .footer__link: a(href="") Отзывы
+              .footer__link: a(href="") Вакансии
+              .footer__link: a(href="") Лицензии и документы
+              //- .footer__link: a(href="") Карта сайта
+              //- .footer__link: a(href="") Политика конфиденциальности
+            .col.col--xxl-5.col--lg-3
+              .container
+                .col.col--xxl-4.col--lg-12.col--sm-6
+                  .socials
+                    a(href="").social.social_insta
+                      img(src="./img/insta.svg", alt="")
+                    a(href="").social.social_vk
+                      img(src="./img/vk.svg", alt="")
+                    a(href="").social.social_facebook
+                      img(src="./img/facebook.svg", alt="")
+                .col.col--xxl-8.col--lg-12.col--sm-6
+                  .footer__right
+                    a(href="tel:+7 (918) 451-48-43").footer__phone +7 (918) 451-48-43
+                    a(href="mailto:clinicglazunova@gmail.com").footer__mail clinicglazunova@gmail.com
+          .footer__bottom.animation-up.wow
+            .copyright © 2020, Клиника Глазуновой
+            .footer__bottom-links
+              .footer__link: a(href="") Политика конфиденциальности
+              .footer__link: a(href="") Карта сайта
+            .madeby Digital consulting и разработка — 
+              a(href="") thisdesign.ru
+
+
+
+
+
+
+    script(src="./js/jquery-2.2.1.min.js")
+    script(src="./js/TweenMax.min.js")
+    script(src="./js/ScrollMagic.min.js")
+    script(src="./js/debug.addIndicators.min.js")
+    script(src="./js/animation.gsap.min.js")
+    script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+    script(src="./js/smoothscroll.js")
+    //- script(src="./js/smoothscroll-js.js")
+    //- script(src="./js/anotherscroll.js")
+    script(src="./js/swiper.min.js")
+    script(src="./js/wow.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/jquery.nice-select.min.js")
+    script(src="./js/flatpickr.min.js")
+    script(src="./js/flatpickr-ru.js")
+    script(src="./js/main.js")
+    script(src="./js/animations.js")
+    script(src="./js/blind.js")

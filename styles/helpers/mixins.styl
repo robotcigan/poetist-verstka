@@ -1,0 +1,111 @@
+debug()
+  *
+    outline 1px solid teal
+    & *
+      outline 1px solid lightblue
+      & *
+        outline 1px solid purple
+
+
+size($height, $width = $height)
+  height $height
+  width $width
+
+
+linkHover($color)
+  cursor pointer
+  display inline-block
+  position relative
+  transition $transition
+  &:before
+    background-color rgba($color, .3)
+    bottom -.3em
+    content ''
+    height 1px
+    right 0
+    position absolute
+    transition $transition
+    width 0
+  &:hover
+    color $primary
+    &:before
+      left 0
+      width 100%
+
+
+circleHover($circleSize, $circleBg, $circleBgHover)
+  align-items center
+  cursor pointer
+  display flex
+  flex-shrink 0
+  justify-content center
+  size($circleSize)
+  &:before,
+  &:after
+    background-color $circleBg
+    border-radius 50%
+    content ''
+    left 0
+    position absolute
+    size($circleSize)
+    top 0
+    transition $transition
+    z-index -1
+  &:after
+    background-color $circleBgHover
+    size($circleSize + .8rem)
+    // size($circleSize)
+    transform scale(0)
+    // left -($circleSize * 0.1)
+    left -.4rem
+    top -.4rem
+    // left 0
+    // top 0
+    // top -($circleSize * 0.1)
+  &:hover
+    &:before
+      // opacity 0
+      transform scale(.8)
+    &:after
+      transform none
+
+
+imageShadow($shadowOpacity)
+  &:after
+    background-color rgba(#000, $shadowOpacity)
+    content ''
+    left 0
+    position absolute
+    size(100%)
+    top 0
+
+
+itemsDelay($delay)
+  for num in 2..12
+    &:nth-child({num})
+      transition-delay ((num - 1) / (10 * $delay)) s
+
+clearfix()
+  &:after
+    content ""
+    display table
+    clear both
+
+center()
+  bottom 0
+  left 0
+  margin auto
+  position absolute
+  right 0
+  top 0
+
+link()
+  border-bottom 1px solid rgba($link, .2)
+  color $link
+  display inline
+  text-decoration none
+  transition border-color .4s, color .4s
+  &:hover
+    color $primary
+    border-color rgba($primary, .2)
+
