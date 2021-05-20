@@ -40,14 +40,18 @@
   &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
     grid-column span 12
 
-@media(min-width 544px)
-  .container
-    grid-column-gap 1.6rem
-    grid-row-gap 1.6rem
-  .col--sm
-    for $sm in 1..12
-      &-{$sm}
-        grid-column span $sm
+@media(min-width $desktop)
+  .wrapper
+    max-width 1120px
+
+// @media(min-width 544px)
+//   .container
+//     grid-column-gap 1.6rem
+//     grid-row-gap 1.6rem
+//   .col--sm
+//     for $sm in 1..12
+//       &-{$sm}
+//         grid-column span $sm
 
 // @media(min-width 768px)
 //   .container

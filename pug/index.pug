@@ -2,37 +2,66 @@ extends layout.pug
 
 block content
 
+
   .wrapper
-    .author
-      .author__img 
+
+    a(href="").back
+      .back__icon
+        include ../img/icons/back.svg
+      .back__text Поэты
+      .back__img
         img(src="../img/poets/Пушкин.png", alt="")
-      .author__name
-        span.author__first-name Пушкин
-        | Александр Сергеевич
-    .poems
-      .poem
-        a(href="") Евгений Онегин
-      .poem
-        a(href="") У лукоморья
-      .poem
-        a(href="") Зимнее утро
-      .poem
-        a(href="") Зимний вечер
-      .poem
-        a(href="") Зима!... Крестьянин торже
-      .poem
-        a(href="") Няне
-      .poem
-        a(href="") Унылая пора
-      .poem
-        a(href="") Осень
-      .poem
-        a(href="") Пророк
-      .poem
-        a(href="") Туча
-      .poem
-        a(href="") Узник
-      .poem
-        a(href="") Уж небо осенью дышало
-      .poem
-        a(href="") Я помню чудное мгновень
+
+    section.section
+      .author
+        .author__img 
+          img(src="../img/poets/Пушкин.png", alt="")
+        .author__name
+          span.author__first-name Пушкин
+          | Александр Сергеевич
+      .categories 
+        .categories__container
+          a(href="").category
+            .category__title Лучшее
+            .category__number 48
+          a(href="").category
+            .category__title Все
+            .category__number 986
+          a(href="").category
+            .category__title Любовь
+            .category__number 240
+          a(href="").category
+            .category__title Природа
+            .category__number 74
+          a(href="").category
+            .category__title Война
+            .category__number 52
+      .poems
+        .poem
+          a(href="") Евгений Онегин
+        .poem
+          a(href="") У лукоморья
+        .poem
+          a(href="") Я памятник себе воздвиг нерукотворный
+        .poem
+          a(href="") Зимнее утро
+        .poem
+          a(href="") Зимний вечер
+        .poem
+          a(href="") Зима!... Крестьянин торже
+        .poem
+          a(href="") Няне
+        .poem
+          a(href="") Унылая пора
+        .poem
+          a(href="") Осень
+        .poem
+          a(href="") Пророк
+        .poem
+          a(href="") Туча
+        .poem
+          a(href="") Узник
+        .poem
+          a(href="") Уж небо осенью дышало
+        .poem
+          a(href="") Я помню чудное мгновень

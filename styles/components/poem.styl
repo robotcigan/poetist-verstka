@@ -1,14 +1,21 @@
 .poem
   display block
-  margin-bottom 1.25em
+  // margin-bottom 1.25em
   a
     display inline-block
     font-family $font-serif
     font-size 2.4rem
+    max-width 100%
     position relative
+    padding .5em 0
+    overflow hidden
+    text-overflow ellipsis
+    // width 100%
+    white-space nowrap
     &:before
       background-color rgba($primary, .3)
-      bottom -.25em
+      bottom .15em
+      // bottom 0
       content ''
       height 1px
       position absolute

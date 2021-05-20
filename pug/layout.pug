@@ -44,7 +44,16 @@ html(lang="ru")
 
       footer.footer
         .wrapper
-          p this is footer
+          .footer__container
+            .footer__left 
+              a(href="").logo
+                img(src="./img/logo.svg", alt="")
+              nav
+                a(href="").nav__link Стихи
+                a(href="").nav__link Поэты
+            .footer__right
+              .copyright &copy; Poetist, 2021
+
 
 
     script(src="./js/main.js")

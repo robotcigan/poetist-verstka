@@ -1,0 +1,32 @@
+.back
+  align-items center
+  border-radius 24px
+  display inline-flex
+  height 4.4rem
+  margin-left -22px
+  padding 8px
+  padding-left 12px
+  &__icon
+    margin-right 4px
+  &__img
+    border-radius 50%
+    overflow hidden
+    margin-left 6px
+    opacity 0
+    transform translateX(-.2rem)
+    transition all .3s ease
+    img
+      size(2.8rem)
+  &:hover
+    background-color #fff
+    .back
+      &__img
+        opacity 1
+        transform none
+
+@media(max-width $desktop)
+  .back
+    &__img
+      display none
+    &:hover
+      background-color transparent

@@ -1,0 +1,29 @@
+.categories
+  border-top $border
+  border-bottom $border
+  font-size 3.2rem
+  margin-bottom 3.2rem
+  margin-right -2.4rem
+  overflow hidden
+  &__container
+    display flex
+    overflow-x scroll
+  .category
+    display flex
+    padding .8em 0
+    padding-right 1em
+    transform translateY(-.1em)
+    &__title
+      font-family $font-decorate
+      margin-right .1em
+    &__number
+      color $primary
+      font-size 1.2rem
+      font-weight 600
+
+
+
+@media(min-width $desktop)
+  .categories
+    &__container
+      overflow-x initial
