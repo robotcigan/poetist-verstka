@@ -504,7 +504,6 @@ img {
   -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1.2rem;
-  grid-row-gap: 2.4rem;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
@@ -514,6 +513,57 @@ img {
   display: none;
 }
 .col {
+  -ms-grid-column: span 12;
+  grid-column: span 12;
+}
+.col--sm-1,
+.col--md-1,
+.col--lg-1,
+.col--xl-1,
+.col--sm-2,
+.col--md-2,
+.col--lg-2,
+.col--xl-2,
+.col--sm-3,
+.col--md-3,
+.col--lg-3,
+.col--xl-3,
+.col--sm-4,
+.col--md-4,
+.col--lg-4,
+.col--xl-4,
+.col--sm-5,
+.col--md-5,
+.col--lg-5,
+.col--xl-5,
+.col--sm-6,
+.col--md-6,
+.col--lg-6,
+.col--xl-6,
+.col--sm-7,
+.col--md-7,
+.col--lg-7,
+.col--xl-7,
+.col--sm-8,
+.col--md-8,
+.col--lg-8,
+.col--xl-8,
+.col--sm-9,
+.col--md-9,
+.col--lg-9,
+.col--xl-9,
+.col--sm-10,
+.col--md-10,
+.col--lg-10,
+.col--xl-10,
+.col--sm-11,
+.col--md-11,
+.col--lg-11,
+.col--xl-11,
+.col--sm-12,
+.col--md-12,
+.col--lg-12,
+.col--xl-12 {
   -ms-grid-column: span 12;
   grid-column: span 12;
 }
@@ -582,7 +632,61 @@ img {
 }
 @media (min-width: 1200px) {
   .wrapper {
-    max-width: 1120px;
+    max-width: 1140px;
+  }
+}
+@media (min-width: 544px) {
+  .container {
+    grid-column-gap: 1.6rem;
+    grid-row-gap: 1.6rem;
+  }
+  .col--sm-1 {
+    -ms-grid-column: span 1;
+    grid-column: span 1;
+  }
+  .col--sm-2 {
+    -ms-grid-column: span 2;
+    grid-column: span 2;
+  }
+  .col--sm-3 {
+    -ms-grid-column: span 3;
+    grid-column: span 3;
+  }
+  .col--sm-4 {
+    -ms-grid-column: span 4;
+    grid-column: span 4;
+  }
+  .col--sm-5 {
+    -ms-grid-column: span 5;
+    grid-column: span 5;
+  }
+  .col--sm-6 {
+    -ms-grid-column: span 6;
+    grid-column: span 6;
+  }
+  .col--sm-7 {
+    -ms-grid-column: span 7;
+    grid-column: span 7;
+  }
+  .col--sm-8 {
+    -ms-grid-column: span 8;
+    grid-column: span 8;
+  }
+  .col--sm-9 {
+    -ms-grid-column: span 9;
+    grid-column: span 9;
+  }
+  .col--sm-10 {
+    -ms-grid-column: span 10;
+    grid-column: span 10;
+  }
+  .col--sm-11 {
+    -ms-grid-column: span 11;
+    grid-column: span 11;
+  }
+  .col--sm-12 {
+    -ms-grid-column: span 12;
+    grid-column: span 12;
   }
 }
 @media (max-width: 1500px) {
@@ -996,22 +1100,50 @@ blockquote:before {
   display: -ms-flexbox;
   display: flex;
 }
+.header:hover .search__input {
+  border-color: #e3e3e3;
+}
 .nav__link {
   font-size: 1.4rem;
 }
 .nav__link:not(:last-child) {
   margin-right: 1em;
 }
+.search {
+  display: -ms-flexbox;
+  display: flex;
+}
+.search__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+.search__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .footer {
   padding-bottom: 2.4rem;
 }
 .footer__container {
-  color: #8a8c9a;
+  color: $text-gray;
 }
 .footer__left {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 2.4rem;
+}
+.authors {
+  overflow: hidden;
+  margin-right: -2.4rem;
+}
+.authors__container {
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .author {
   -ms-flex-align: center;
@@ -1021,6 +1153,7 @@ blockquote:before {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 3.2rem;
+  margin-right: 1.6rem;
   text-align: center;
 }
 .author__img {
@@ -1038,6 +1171,11 @@ blockquote:before {
 }
 .author__first-name {
   display: block;
+}
+.author_special {
+  margin-right: 0;
+}
+.author_special .author__first-name {
   font-family: 'Playfair Display SC', 'Georgia', 'Times New Roman', sans-serif;
   font-size: 4rem;
   margin-bottom: 0.4em;
@@ -1157,23 +1295,32 @@ blockquote:before {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .categories .category {
   display: -ms-flexbox;
   display: flex;
   padding: 0.8em 0;
-  padding-right: 1em;
+  padding-right: 0.8em;
   -ms-transform: translateY(-0.1em);
   transform: translateY(-0.1em);
 }
 .categories .category__title {
+  color: #8a8c9a;
   font-family: 'Playfair Display SC', 'Georgia', 'Times New Roman', sans-serif;
   margin-right: 0.1em;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
 .categories .category__number {
   color: #d1b88d;
   font-size: 1.2rem;
   font-weight: 600;
+}
+.categories .category:hover .category__title {
+  color: #393c4d;
+}
+.categories .category_active .category__title {
+  color: #1e1f23;
 }
 @media (min-width: 1200px) {
   .categories__container {

@@ -2,7 +2,6 @@
   align-items center
   background-color $light-header
   display flex
-  // justify-content space-between
   margin-bottom 2.4rem
   min-height 4.8rem
   &__container
@@ -12,9 +11,25 @@
   &__left
     align-items center
     display flex
+  &:hover
+    .search
+      &__input
+        border-color #e3e3e3
 
 .nav
   &__link
     font-size 1.4rem
     &:not(:last-child)
       margin-right 1em
+
+.search
+  display flex
+  &__input
+    background-color transparent
+    border none
+    border-bottom 1px solid transparent
+    transition $transition
+  &__button
+    background-color transparent
+    border none
+    cursor pointer

@@ -8,18 +8,29 @@
   &__container
     display flex
     overflow-x scroll
+    -webkit-overflow-scrolling touch
   .category
     display flex
     padding .8em 0
-    padding-right 1em
+    padding-right .8em
     transform translateY(-.1em)
     &__title
+      color $light-text-gray
       font-family $font-decorate
       margin-right .1em
+      transition $transition
     &__number
       color $primary
       font-size 1.2rem
       font-weight 600
+    &:hover
+      .category
+        &__title
+          color $light-text-dark-gray
+    &_active
+      .category
+        &__title
+          color $light-text-main
 
 
 

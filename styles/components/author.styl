@@ -1,8 +1,17 @@
+.authors
+  overflow hidden
+  margin-right -2.4rem
+  &__container
+    display flex
+    overflow-x scroll
+    -webkit-overflow-scrolling touch
+
 .author
   align-items center
   display flex
   flex-direction column
   margin-bottom 3.2rem
+  margin-right 1.6rem
   text-align center
   &__img
     border-radius 50%
@@ -13,10 +22,18 @@
     size(12rem)
     img
       max-width 100%
-  // &__name
-
   &__first-name
     display block
-    font-family $font-decorate
-    font-size 4rem
-    margin-bottom .4em
+  &_special
+    margin-right 0
+    .author
+      &__first-name
+        font-family $font-decorate
+        font-size 4rem
+        margin-bottom .4em
+
+
+
+
+
+

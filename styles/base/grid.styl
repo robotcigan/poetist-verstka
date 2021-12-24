@@ -9,7 +9,7 @@
   grid minmax(100px, auto)
   grid-template-columns repeat(12, 1fr)
   grid-column-gap 1.2rem
-  grid-row-gap 2.4rem
+  // grid-row-gap 2.4rem
   margin-left 0
   margin-right 0
   padding-left 0
@@ -20,12 +20,12 @@
 .col
   grid-column span 12
 
-// .col--sm,
-// .col--md,
-// .col--lg,
-// .col--xl
-//   &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
-//     grid-column span 12
+.col--sm,
+.col--md,
+.col--lg,
+.col--xl
+  &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12
+    grid-column span 12
 
 // .col--xs
 //   for $xs in 1..12
@@ -42,16 +42,16 @@
 
 @media(min-width $desktop)
   .wrapper
-    max-width 1120px
+    max-width 1140px
 
-// @media(min-width 544px)
-//   .container
-//     grid-column-gap 1.6rem
-//     grid-row-gap 1.6rem
-//   .col--sm
-//     for $sm in 1..12
-//       &-{$sm}
-//         grid-column span $sm
+@media(min-width 544px)
+  .container
+    grid-column-gap 1.6rem
+    grid-row-gap 1.6rem
+  .col--sm
+    for $sm in 1..12
+      &-{$sm}
+        grid-column span $sm
 
 // @media(min-width 768px)
 //   .container
